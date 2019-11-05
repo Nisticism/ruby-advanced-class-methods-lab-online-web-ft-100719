@@ -22,9 +22,9 @@ class Song
     song
   end
 
-  def self.create_by_name(name)
+  def self.create_by_name(new_name)
     song = self.new
-    song.name = name
+    song.name = new_name
     @@all << song
     song
   end
