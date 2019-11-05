@@ -33,8 +33,18 @@ class Song
   end
   
   def self.find_or_create_by_name(name)
+    song_new = self.new
+    song_new.name = name
+    if find_by_name(name) == song_new
+      return song_new
+    else 
+      @@all << song_new
+    end
     
   end
+  
+  def self.alphabetical
+    
   
   def self.new_from_filename
     
